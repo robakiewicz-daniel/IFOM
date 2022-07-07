@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="contact" class="contact">
+        <form class="emailForm" method="POST" action="emailform.php">
+          <label>
+            Your mail
+            <input name="from" type="email" placeholder="Here You must put Your mail" required>
+          </label>
+          <label>
+            Topic
+            <input name="subject" placeholder="Here You must put a message topic" required>
+          </label><br>
+          <label for="inp-message">
+            Message
+          </label>
+          <textarea name="message" id="inp-message" placeholder="Here You can write your message" required></textarea>
+          <div class="g-recaptcha" data-sitekey="6Lc9_xMUAAAAAFPVNhvDKb9lMXHGI4o7-zhqkTgL"></div>
+          <button class="emailFormSubmit" name="submit" type="submit">Send</button>
+      
+          <div class="emailFormAlert"></div>
+        </form>
+      
+        <button type="button" id="close-contact-btn" class="close-btn">
+          <a class="fa fa-times close-form" aria-hidden="true" href="index.html"> Come back</a>
+        </button>
+      </div>
+      </body>
+      <script>
+      $(function(){
+        'use strict';
+      
+        const userEmail = document.getElementsByName('from')[0];
+        const subject = document.getElementsByName('subject')[0];
+        const message = document.getElementsByName('message')[0];
+        const recaptcha = document.querySelector(".g-recaptcha");
+        const formAlert = document.querySelector(".emailFormAlert");
+        const contactForm = $('#contact');
+      
+        function toggleContactForm(state) {
+          if (typeof state !== 'boolean') return TypeError('State must be a boolean');
+      
+          if (state === true) {
+            contactForm.fadeIn();
+          }
+          else {
+            contactForm.fadeOut();
+            userEmail.value='';
+            subject.value='';
+            message.value='';
+            formAlert.innerHTML='';
+            grecaptcha.reset();
+          }
+        }
+      });
+      </script>
+</html>

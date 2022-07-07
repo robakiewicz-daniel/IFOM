@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel Robakiewicz">
+    <meta name="description" content="Lorem ipsum">
+    <meta name="keywords" content="TRF group">
+    <link rel="icon" href="Images/LogoIFOM.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <title>IFOM ISHIP</title>
+    <style>
+    </style>
+</head>
+<body>
+    <header>    
+        <nav>   
+            <div class="filler"></div>
+            <div class="logo">
+                <img src="Images/LogoIFOM.png" alt="Logo IFOM ISHIP">
+                <p>IFOM ISHIP</p>
+            </div>
+            <div class="nav">   
+            <div class="high-nav">
+                <a class="bttn-home" href="#first">
+                    Home
+                </a>
+                <a class="bttn-reasons" href="#second">
+                    Reasons
+                </a>
+                <a class="bttn-about" href="#third">
+                    About Us
+                </a>
+                <a class="start" href="contact.html">     
+                    Contact
+                </a>
+            </div>
+            <!-- <div id="lang">
+                <p>PL</p>
+                <p class="hidden">ENG</p>
+                <p class="hidden">IT</p>
+            </div> -->
+        </div>            
+        </nav>
+    </header>
+
+    <div id="first" >   
+        <h1>IFOM ISHIP</h1>
+        <div class="arrow"></div>
+    </div>
+
+    <div id="second">
+    <div class="reasons">
+        <div class="reason-header">
+            <img src="Images/ikonki/ikonkazarowki.png" alt="">
+            <p>INVOLVEMENT IN PROJECT PREPARATION</p>
+        </div>
+        <div class="reason-text">Constant communication guaranteed. Our Experts team can guide you through all the steps to secure a successful project. Most of our projects receive the funding!
+        </div>
+    </div>
+    <div class="reasons">
+        <div class="reason-header">
+            <img src="Images/ikonki/ikonkanotatnika.png" alt="">
+            <p>INNOVATIVE TRAINING PROGRAMMES</p>
+        </div>
+        <div class="reason-text">Detailed training programmes aimed at developing key skills for students and teaching staff. Added value for your project guaranteed!
+        </div>
+    </div>
+    <div class="reasons">
+        <div class="reason-header">
+            <img src="Images/ikonki/star.png" alt="">
+            <p>ECVET EXPERTS
+            </p>
+        </div>
+        <div class="reason-text">IFOM ISHIP assists in implementing ECVET system elements in project proposals thanks to our strong links with vocational colleges.</div>
+    </div>
+    <div class="reasons">
+        <div class="reason-header">
+            <img src="Images/ikonki/ikonasieci.png" alt="">
+            <p>EXTENSIVE LOCAL NETWORK
+            </p>
+        </div>
+        <div class="reason-text">Serious host companies from all different VET fields including important brands. We provide PIC numbers and detailed descriptions of our partner firms.
+
+        </div>
+    </div>
+    <div class="reasons">
+        <div class="reason-header">
+            <img src="Images/ikonki/ikonkazolwika.png" alt="">
+            <p>TRUSTWORTHY PROJECT PARTNER
+            </p>
+        </div>
+        <div class="reason-text">IFOM ISHIP is a partner you can rely on in any situation: 24/7 emergency contact with a flexible and understanding team. References provided on request.</div>
+    </div>
+    <div class="reasons">
+        <div class="reason-header">
+            <img src="Images/ikonki/ikonalokalizacji.png" alt="">
+            <p>PERFECT PLACE FOR MOBILITY PROJECTS
+            </p>
+        </div>
+        <div class="reason-text">IFOM ISHIP delivers programmes in wonderful cities of Spain (Seville, Malaga and Úbeda) and Portugal (Setúbal – Lisbon sud).</div>
+    </div>
+    </div>
+
+    <div id="third">
+
+        <div class="about1" style="width:30%">
+          <img src="Images/LogoIFOM.png" alt="Kinda logo">
+            <p>
+            About Us
+            </p>
+        </div>
+        <div class="about2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quae magnam iste, cumque soluta quis eius ullam inventore, repudiandae consequuntur molestiae laboriosam, illo eligendi nihil modi! Odit consequuntur magni nemo!
+            Pariatur, quas laborum ratione cupiditate ipsam reprehenderit adipisci facere, ea quam accusantium distinctio quisquam nulla similique doloremque deserunt delectus, beatae harum minus quaerat nemo! Alias repellendus dignissimos culpa eum praesentium.
+            Debitis quod magni architecto nostrum cum autem possimus aperiam eligendi nam quibusdam blanditiis rerum dicta ut commodi, non fuga. Aliquid assumenda sunt facere iure at odio aperiam maxime rem illum?</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <div id="firstfoot"><h1>
+            CONTACT
+        </h1>
+        <p>WORK WITH US</p>
+        </div>
+        <div id="gridfoot">
+            <div>IFOM ISHIP<br>-----</div>
+            <div>NIP<br>REGON</div>
+            <div>ifom@email.com<br>0038 123 123 123 1</div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">    
+    window.onload=function(){
+    const bg1 = document.getElementById('first');
+    const x = document.getElementsByClassName('filler');
+    let lang = document.getElementById('lang');
+    const langp = document.getElementsByClassName('hidden');
+    window.addEventListener('scroll', function(){
+        bg1.style.backgroundSize = 100 + +window.pageYOffset/20+'%';
+        bg1.style.filter = `blur(${window.pageYOffset/30}px)`;
+        
+    })
+
+    lang.addEventListener('mouseover', function(event){
+        langp.style.visibilty=1;
+    })
+
+const debounce = (fn) => {
+
+    let frame;
+
+return (...params) => {
+
+  if (frame) { 
+    cancelAnimationFrame(frame);
+  }
+  frame = requestAnimationFrame(() => {
+        fn(...params);
+  });
+
+} 
+};
+
+const storeScroll = (e) => {
+    document.documentElement.dataset.scroll = window.scrollY;
+}
+document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+
+
+storeScroll();
+    }
+    </script>
+</body>
+</html>
